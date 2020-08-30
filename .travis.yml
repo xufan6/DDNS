@@ -1,12 +1,11 @@
 language: python
 python:
-  - "2.7"
   - "3.7"
 
 dist: xenial
 
-# os: 
-#   - linux
+os:
+  - linux
 #   - osx
 
 
@@ -29,16 +28,7 @@ deploy:
     skip_cleanup: true
     file:
       - "dist/ddns"
+    draft: true
     on:
       tags: true
-      branch: master
-      python: '3.7'
-  - provider: pypi
-    user: newfuture-bot
-    password: "${PYPI_PWD}"
-    skip_cleanup: true
-    distributions: "sdist bdist_wheel" # Your distributions here
-    on:
-      tags: true
-      branch: master
       python: '3.7'
