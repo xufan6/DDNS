@@ -30,5 +30,4 @@ deploy:
       - "dist/ddns"
     draft: true
     on:
-      tags: true
       python: '3.7'
