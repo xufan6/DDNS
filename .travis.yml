@@ -1,6 +1,7 @@
 language: python
 python:
   - "3.7"
+  - "2.7"
 
 dist: xenial
 
@@ -17,7 +18,7 @@ before_deploy:
 
 # command to install dependencies 
 install:
-  - pip install pyinstaller
+    - pip install pyinstaller==3.6
 
 # command to run tests
 script:
@@ -39,3 +40,4 @@ deploy:
     draft: true
     on:
       all_branches: true
+      python: '3.7'
